@@ -306,17 +306,85 @@ button {
 }
 
 .sidebar {
-  width: 245px;
+  width: 100%;
   background: #111827;
   color: white;
-  min-height: 100vh;
-  position: fixed;
-  left: 0;
+  position: sticky;
   top: 0;
-  bottom: 0;
-  padding: 22px 14px;
   z-index: 20;
+  padding: 10px 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.12);
 }
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0 10px;
+}
+
+.sidebar .logo h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.sidebar .logo span {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav button {
+  flex: 0 0 auto;
+  width: auto;
+  border: 0;
+  background: transparent;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 9px 12px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.nav button:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.nav button.active {
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+}
+
+.nav button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.nav button label {
+  display: inline;
+  font-size: 13px;
+    }
 
 .logo {
   padding: 8px 12px 25px;
@@ -371,11 +439,11 @@ button {
 }
 
 .main {
-  margin-left: 245px;
-  width: calc(100% - 245px);
+  margin-left: 0;
+  width: 100%;
   min-height: 100vh;
-  padding: 28px;
-}
+  padding: 24px 32px 40px;
+    }
 
 header {
   display: flex;
