@@ -1,50 +1,35 @@
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  position: relative;
-}
-
-.sidebar {
-  width: 245px;
-  background: #111827;
-  color: white;
-  min-height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  padding: 22px 14px;
-  z-index: 20;
-  box-sizing: border-box;
-}
-
 .main {
   margin-left: 245px;
-  flex: 1;
+  width: calc(100% - 245px);
   min-height: 100vh;
   padding: 28px;
   box-sizing: border-box;
-  max-width: calc(100% - 245px);
 }
 
 @media (max-width: 900px) {
   .sidebar {
     width: 72px;
     padding: 14px 8px;
+    box-sizing: border-box;
   }
 
   .main {
     margin-left: 72px;
-    max-width: calc(100% - 72px);
-    padding: 18px;
+    width: calc(100% - 72px);
+    padding: 14px;
+    box-sizing: border-box;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
   .main {
     margin-left: 72px;
-    max-width: calc(100% - 72px);
-    padding: 13px;
+    width: calc(100% - 72px);
+    padding: 10px;
+    box-sizing: border-box;
   }
 }
