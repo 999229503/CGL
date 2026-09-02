@@ -949,18 +949,8 @@ th {
   flex-wrap: wrap;
   margin-top: 14px;
 }
-
-@media (max-width: 900px) {
-  .sidebar {
-    width: 72px;
-    padding: 14px 8px;
-  }
-
-  .logo {
-    text-align: center;
-    padding: 8px 0 20px;
-  }
-
+@media (max-width: 900px)   
+  
   .logo h1 {
     font-size: 0;
   }
@@ -975,40 +965,37 @@ th {
   }
 
   .nav button {
-    width: 56px;
-    height: 50px;
-    margin: 0 auto;
-    padding: 0;
-    justify-content: center;
-    gap: 0;
-    font-size: 0;
-  }
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 9px 12px;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
 
-  .nav button span {
-    width: 100%;
-    height: 100%;
-    font-size: 22px;
-  }
+.nav button span {
+  width: auto;
+  height: auto;
+  font-size: 18px;
+}
 
-  .nav button label {
-    display: none;
-  }
-
-  .main {
-    margin-left: 72px;
-    width: calc(100% - 72px);
-    padding: 18px;
-  }
+.nav button label {
+  display: inline;
+  font-size: 13px;
+    }
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 13px;
-  }
+.main {
+  width: 100%;
+  margin-left: 0;
+    }
 
   header {
     align-items: flex-start;
