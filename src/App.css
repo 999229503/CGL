@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 900px) {
   .sidebar {
     width: 72px;
@@ -21,7 +28,8 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
 
@@ -31,5 +39,20 @@
     width: calc(100% - 72px);
     padding: 10px;
     box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Coluna única no celular para evitar sobreposição */
+    gap: 10px;
+  }
+
+  .topbar {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .userEmail {
+    max-width: 110px;
   }
 }
