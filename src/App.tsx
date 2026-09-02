@@ -3467,7 +3467,7 @@ const adicionarEtapa = () => {
             )}
 
             <div className="sectionTitle">📸 Fotos e progresso da obra</div>
-            <div className="photoTools"><Campo label="Descrição da foto" value={fotoDescricao} placeholder="Ex.: Parede da frente concluída" onChange={setFotoDescricao} /><input ref={fotoInputRef} type="file" accept="image/*" capture="environment" onChange={adicionarFoto} /></div>
+            <div className="photoTools"><Campo label="Descrição da foto" value={fotoDescricao} placeholder="Ex.: Parede da frente concluída" onChange={setFotoDescricao} /><input ref={fotoInputRef} type="file" accept="image/*" onChange={adicionarFoto} /></div>
             {(obraAtual.fotos || []).length === 0 ? <div className="photoEmpty">Nenhuma foto adicionada ainda. Tire uma foto ou escolha uma da galeria para registrar o andamento.</div> : <div className="photoGrid">{(obraAtual.fotos || []).map((foto) => <div className="photoCard" key={foto.id}><img src={foto.url} alt={foto.descricao || foto.nome} /><div><strong>{foto.descricao || foto.nome}</strong><small>{foto.data}</small><button className="danger" onClick={() => excluirFoto(obraAtual.id, foto.id)}>🗑️ Excluir</button></div></div>)}</div>}
 
             <div className="formActions">
