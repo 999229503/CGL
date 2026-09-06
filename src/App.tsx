@@ -2163,7 +2163,7 @@ const adicionarEtapa = () => {
       <div className="app" style={{ WebkitUserSelect: "none", userSelect: "none", WebkitTouchCallout: "none" }}>
         <aside className="sidebar">
           <div className="logo">
-            <div className="logoMark">🏗️</div>
+            <div className="logoMark">🏛️</div>
             <div className="logoText"><h1>CGL</h1><span>Gerenciamento de obras</span></div>
           </div>
 
